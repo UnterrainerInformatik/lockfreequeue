@@ -50,4 +50,4 @@ for (int i = 0; i < numberCount - enqueueLater; i++)
 
 [homepage]: http://www.unterrainer.info
 [coding]: http://www.unterrainer.info/Home/Coding
-[github] : https://github.com/UnterrainerInformatik/lockfreequeue
+[github]: https://github.com/UnterrainerInformatik/lockfreequeue
