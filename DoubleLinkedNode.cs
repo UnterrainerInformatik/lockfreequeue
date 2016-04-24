@@ -1,30 +1,39 @@
-﻿/**************************************************************************
- * 
- * Copyright (c) Unterrainer Informatik OG.
- * This source is subject to the Microsoft Public License.
- * 
- * See http://www.microsoft.com/opensource/licenses.mspx#Ms-PL.
- * All other rights reserved.
- * 
- * (In other words you may copy, use, change and redistribute it without
- * any restrictions except for not suing me because it broke something.)
- * 
- * THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
- * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
- * PURPOSE.
- * 
- ***************************************************************************/
+﻿// *************************************************************************** 
+// This is free and unencumbered software released into the public domain.
+// 
+// Anyone is free to copy, modify, publish, use, compile, sell, or
+// distribute this software, either in source code form or as a compiled
+// binary, for any purpose, commercial or non-commercial, and by any
+// means.
+// 
+// In jurisdictions that recognize copyright laws, the author or authors
+// of this software dedicate any and all copyright interest in the
+// software to the public domain. We make this dedication for the benefit
+// of the public at large and to the detriment of our heirs and
+// successors. We intend this dedication to be an overt act of
+// relinquishment in perpetuity of all present and future rights to this
+// software under copyright law.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+// OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+// ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+// OTHER DEALINGS IN THE SOFTWARE.
+// 
+// For more information, please refer to <http://unlicense.org>
+// ***************************************************************************
 
 namespace LockFreeQueue
 {
-	/// <summary>
-	///     This is a simple node containing an arbitrary item, a next-pointer and a prev-pointer.
-	/// </summary>
-	/// <typeparam name="T"></typeparam>
-	public class DoubleLinkedNode<T> : SingleLinkedNode<T>
-	{
-		public DoubleLinkedNode<T> Prev;
-		public new DoubleLinkedNode<T> Next;
-	}
+    /// <summary>
+    ///     This is a simple node containing an arbitrary item, a next-pointer and a prev-pointer.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class DoubleLinkedNode<T> : SingleLinkedNode<T>
+    {
+        public DoubleLinkedNode<T> Prev;
+        public new DoubleLinkedNode<T> Next;
+    }
 }
