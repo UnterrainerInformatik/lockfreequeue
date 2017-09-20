@@ -119,9 +119,9 @@ namespace LockFreeQueue
         ///     Dequeues the next item (the oldest in the queue).
         /// </summary>
         /// <returns></returns>
-        public T Dequeue()
+        public bool TryDequeue(out T result)
         {
-            var result = default(T);
+            result = default(T);
 
             // Loop until we manage to advance the head, removing a node (if there are no nodes to dequeue, we'll exit
             // the method instead).
@@ -146,7 +146,7 @@ namespace LockFreeQueue
                         if (oldHeadNext == null)
                         {
                             // ...then there is nothing to dequeue.
-                            return default(T);
+                            return false;
                         }
 
                         // If the head's Next field is non-null and head was equal to the tail then we have a lagging tail. Try and update it.
@@ -161,7 +161,21 @@ namespace LockFreeQueue
                 }
             }
             Interlocked.Decrement(ref count);
-            return result;
+            return true;
+        }
+
+        /// <summary>
+        ///     Dequeues the next item (the oldest in the queue).
+        /// </summary>
+        /// <returns></returns>
+        public T Dequeue()
+        {
+            T result;
+            if (TryDequeue(out result))
+            {
+                return result;
+            }
+            return default(T);
         }
     }
 }
