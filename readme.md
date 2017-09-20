@@ -32,6 +32,10 @@
  ***************************************************************************/
 
 ```
+# WARNING
+This repository is not active any longer. The code is old and obsolete.  
+Use the .NET class `ConcurrentQueue<T>` instead.
+Thank you.
 
 # General  
 
